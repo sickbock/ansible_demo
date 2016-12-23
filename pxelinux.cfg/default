@@ -1,0 +1,28 @@
+serial 0 9600 0xab3
+default vesamenu.c32
+#prompt 0
+timeout 300
+ONTIMEOUT local
+display boot.msg
+menu resolution 640 480
+menu background splash.png
+menu clear
+menu title PXE boot menu
+menu color border 0 #ffffffff #00000000
+menu color sel 7 #ffffffff #ff000000
+menu color title 0 #ffffffff #00000000
+menu color tabmsg 0 #ffffffff #00000000
+menu color unsel 0 #ffffffff #00000000
+menu color hotsel 0 #ff000000 #ffffffff
+menu color hotkey 7 #ffffffff #ff000000
+menu color scrollbar 0 #ffffffff #00000000
+
+LABEL local
+menu label Boot from ^local drive
+localboot 0xffff
+
+LABEL RHEL CentOS 7 x86_64
+MENU LABEL CentOS 7 x86_64
+KERNEL vmlinuz
+# ansiblevm
+APPEND initrd=initrd.img ks=http://10.0.2.2/minimal_el7_free-space-in-vg_ansible.cfg ramdisk_size=131072 ip=dhcp lang=en_US keymap=us hostname=ansiblevm
