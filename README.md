@@ -1,2 +1,2 @@
-# ansible_demo
-Ansible and GitLab
+# Ansible demo
+Initial setup with Ansible and GitLab. 
