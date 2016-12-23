@@ -25,4 +25,6 @@ LABEL RHEL CentOS 7 x86_64
 MENU LABEL CentOS 7 x86_64
 KERNEL vmlinuz
 # ansiblevm
-APPEND initrd=initrd.img ks=http://10.0.2.2/minimal_el7_free-space-in-vg_ansible.cfg ramdisk_size=131072 ip=dhcp lang=en_US keymap=us hostname=ansiblevm
+APPEND initrd=initrd.img ks=https://raw.githubusercontent.com/sickbock/ansible_demo/master/minimal_el7_vm.cfg ramdisk_size=131072 ip=dhcp lang=en_US keymap=us hostname=minimalvm
+# ansiblevm
+#APPEND initrd=initrd.img ks=http://10.0.2.2/minimal_el7_free-space-in-vg_ansible.cfg ramdisk_size=131072 ip=dhcp lang=en_US keymap=us hostname=ansiblevm
