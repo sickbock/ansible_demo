@@ -11,6 +11,7 @@ The following files are provided:
 The Kickstart configures the systems it installs as Vagrant boxes, so all passwords are "vagrant" and the insecure Vagrant public key should be installed for the user "vagrant".
 
 Post install:
+* Kickstart at least the Aansible host and one minimal VM (in VirtualBox you can use it to create linked clones for your Gitlab server and other roles you want to test as throw away VM's)
 * Configure networking: DNS, hostnames, routes, .. on all VM's
 * Edit `/etc/ansible/hosts` and `site.yml` on the Ansible machine to point to your GitLab host
 * Run the playbook 
