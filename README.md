@@ -13,7 +13,7 @@ The Kickstart configures the systems it installs as Vagrant boxes, so all passwo
 Post install:
 * Kickstart at least the Ansible host and one minimal VM (in VirtualBox you can use it to create linked clones for your Gitlab server and other roles you want to test as throw away VM's)
 * Configure networking: DNS, hostnames, routes, .. on all VM's
-* Edit `/etc/ansible/hosts` and `site.yml` on the Ansible machine to point to your GitLab host
+* Wait for the Ansible installation to finish (or manually install when it failed) and edit `/etc/ansible/hosts` and `site.yml` on the Ansible machine to point to your GitLab host
 * Run the playbook 
 * Go to the GitLab GUI and set the "root password"
 * Finish by implementing your Git design, both, in GitLab and on the Ansible machine
